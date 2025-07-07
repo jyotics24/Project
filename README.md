@@ -113,7 +113,5 @@ Returns:
 
 ## 📌 Author
 
-Developed by : JYOTIPRAKASH KHUNTIA
+**Developed by** : JYOTIPRAKASH KHUNTIA  
 Feel free to use and modify this project for learning or production!
-
----

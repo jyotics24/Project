@@ -1,27 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title><b>HEART DISEASE PREDICTION</b></title>
+  <meta charset="UTF-8" />
+  <title>HEART DISEASE PREDICTION</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
   <div class="container">
-    <h2>HEART DISEASE PREDICTION</h2>
+    <div class="logo-container">
+      <div class="logo-spinner"></div>
+      <h1>HEART DISEASE PREDICTION</h1>
+    </div>
     <form method="post" action="/predict">
-      {% for field in ['Gender', 'Age', 'Smoker', 'BP_Med', 'P_Stroke', 'Hypertension','Diabetes', 'Cholesterol', 'Systolic_Bp', 'BMI', 'Heart_rate', 'Glucose'] %}
-        <label for="{{ field }}">{{ field.replace('_', ' ').title() }}</label>
-        <input type="number" name="{{ field }}" required>
-      {% endfor %}
-      <button type="submit">Submit</button>
-      <button type="reset" style="background-color:#f44336;">Reset</button>
-    </form>
-    {% if prediction_text %}
-  <div class="message-box {{ 'danger' if 'may have' in prediction_text else 'safe' }}">
-    <h3>{{ prediction_text }}</h3>
-  </div>
-{% endif %}
+      <div class="grid-form">
+        <!-- Gender dropdown -->
+        <div class="form-group">
+          <label for="Gender">Gender</label>
+          <select name="Gender" id="Gender" required>
+            <option value="">--Select--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
 
+        <!-- Age input number -->
+        <div class="form-group">
+          <label for="Age">Age</label>
+          <input type="number" name="Age" id="Age" required />
+        </div>
+
+        <!-- Yes/No dropdowns -->
+        {% for field in ['Smoker', 'BP_Med', 'P_Stroke', 'Hypertension', 'Diabetes'] %}
+          <div class="form-group">
+            <label for="{{ field }}">{{ field.replace('_', ' ').title() }}</label>
+            <select name="{{ field }}" id="{{ field }}" required>
+              <option value="">--Select--</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        {% endfor %}
+
+        <!-- Numeric inputs -->
+        {% for field in ['Cholesterol', 'Systolic_Bp', 'BMI', 'Heart_rate', 'Glucose'] %}
+          <div class="form-group">
+            <label for="{{ field }}">{{ field.replace('_', ' ').title() }}</label>
+            <input type="number" name="{{ field }}" id="{{ field }}" required />
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="submit-btn">SUBMIT</button>
+        <button type="reset" class="reset-btn">RESET</button>
+      </div>
+    </form>
+
+    {% if prediction_text %}
+    <div class="result-box">
+      <h2>RESULT</h2>
+      <div class="{{ 'danger' if 'RISK' in prediction_text else 'safe' }}">
+        {{ prediction_text }}
+      </div>
+      <a href="{{ url_for('home') }}" class="home-link">TRY AGAIN</a>
+    </div>
+    {% endif %}
   </div>
 </body>
 </html>

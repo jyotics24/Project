@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PREDICTION RESULT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="result-box">
+    <div class="logo-spinner small"></div>
+    <h2>PREDICTION RESULT</h2>
+    <div class="{{ 'danger' if 'may have' in prediction_text.lower() else 'safe' }}">
+      {{ prediction_text }}
+    </div>
+    <a class="home-link" href="/">GO BACK</a>
+  </div>
+</body>
+</html>

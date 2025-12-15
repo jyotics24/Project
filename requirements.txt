@@ -1,6 +1,9 @@
-flask
+# Requirements for the project
 joblib
 scikit-learn
 numpy
 pandas
 matplotlib
+flask
+seaborn
+requests

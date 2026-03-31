@@ -23,21 +23,25 @@ A Machine Learning-based web application built using **Flask** that predicts the
 
 ---
 
+---
+
 ## 📁 Project Structure
+
+```text
 .
-├── app.py # Flask application (Web Server)
-├── heart_disease_predictor.py # Model training & evaluation script
-├── model.pkl # Exported trained ML model
-├── requirements.txt # Python dependencies
-├── Dockerfile # Container instructions
-├── README.md # Project documentation
+├── app.py                      # Flask application (Web Server)
+├── heart_disease_predictor.py  # Model training & evaluation script
+├── model.pkl                   # Exported trained ML model
+├── requirements.txt            # Python dependencies
+├── Dockerfile                  # Container instructions
+├── README.md                   # Project documentation
 ├── Data_set/
-│ └── framingham.csv # Source dataset
+│   └── framingham.csv          # Source dataset
 ├── static/
-│ └── style.css # Frontend styling
+│   └── style.css               # Frontend styling
 └── templates/
-├── index.html # User input form
-└── result.html # Prediction display page
+    ├── index.html              # User input form
+    └── result.html             # Prediction display page
 
 
 ---

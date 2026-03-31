@@ -23,11 +23,9 @@ A Machine Learning-based web application built using **Flask** that predicts the
 
 ---
 
----
-
 ## 📁 Project Structure
 
-```text
+```
 .
 ├── app.py                      # Flask application (Web Server)
 ├── heart_disease_predictor.py  # Model training & evaluation script
@@ -42,7 +40,7 @@ A Machine Learning-based web application built using **Flask** that predicts the
 └── templates/
     ├── index.html              # User input form
     └── result.html             # Prediction display page
-
+```
 
 ---
 

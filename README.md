@@ -50,7 +50,9 @@ A Machine Learning-based web application built using **Flask** that predicts the
 
 To retrain the model or update parameters, run:
 
+```bash
 python heart_disease_predictor.py
+```
 
 - Loads data  
 - Handles missing values  
@@ -63,8 +65,10 @@ python heart_disease_predictor.py
 
 Install dependencies and run the app:
 
-pip install -r requirements.txt  
-python app.py  
+```bash
+pip install -r requirements.txt
+python app.py
+```
 
 Application will be available at:  
 http://localhost:5000  
@@ -96,11 +100,15 @@ The project evaluates several classification algorithms:
 
 Build the image:
 
+```bash
 docker build -t heart-disease-app .
+```
 
 Run the container:
 
+```bash
 docker run -p 5000:5000 heart-disease-app
+```
 
 ---
 

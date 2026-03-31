@@ -1,45 +1,42 @@
 # ❤️ Heart Disease Prediction Web Application
 
-A Machine Learning-based web application built using Flask that predicts the risk of heart disease based on user health inputs. The model is trained on the Framingham Heart Study dataset and provides real-time predictions through an intuitive web interface.
+A Machine Learning-based web application built using **Flask** that predicts the risk of heart disease based on user health inputs. The model is trained on the **Framingham Heart Study** dataset and provides real-time predictions through an intuitive web interface.
 
 ---
 
 ## 📌 Features
 
-* User-friendly UI: Clean, responsive web interface for data entry.
-* Real-time Prediction: Instant risk assessment using a pre-trained ML model.
-* Multi-Algorithm Evaluation: Model selected based on comparative performance.
-* Dockerized Deployment: Simplified setup and scaling using containerization.
+* **User-friendly UI:** Clean, responsive web interface for data entry.
+* **Real-time Prediction:** Instant risk assessment using a pre-trained ML model.
+* **Multi-Algorithm Evaluation:** Model selected based on comparative performance.
+* **Dockerized Deployment:** Simplified setup and scaling using containerization.
 
 ---
 
 ## 🧠 Tech Stack
 
-* Backend: Python, Flask
-* Machine Learning: scikit-learn, Pandas, NumPy
-* Frontend: HTML5, CSS3
-* Model Serialization: Joblib
-* Containerization: Docker
+* **Backend:** Python, Flask
+* **Machine Learning:** scikit-learn, Pandas, NumPy
+* **Frontend:** HTML5, CSS3
+* **Model Serialization:** Joblib
+* **Containerization:** Docker
 
 ---
 
 ## 📁 Project Structure
 
-linux-scripting-project/
-│
+```text
+.
 ├── app.py                      # Flask application (Web Server)
 ├── heart_disease_predictor.py  # Model training & evaluation script
 ├── model.pkl                   # Exported trained ML model
 ├── requirements.txt            # Python dependencies
 ├── Dockerfile                  # Container instructions
 ├── README.md                   # Project documentation
-│
 ├── Data_set/
 │   └── framingham.csv          # Source dataset
-│
 ├── static/
 │   └── style.css               # Frontend styling
-│
 └── templates/
     ├── index.html              # User input form
     └── result.html             # Prediction display page

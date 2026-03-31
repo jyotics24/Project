@@ -1,3 +1,11 @@
+# ❤️ Heart Disease Prediction Web Application
+
+A Machine Learning-based web application built using Flask that predicts the risk of heart disease based on user health inputs. The model is trained on the Framingham Heart Study dataset and provides real-time predictions through a simple web interface.
+
+---
+
+## 📌 Features
+
 - User-friendly web interface for input  
 - Real-time heart disease risk prediction  
 - Trained ML model using multiple algorithms  
@@ -18,7 +26,6 @@
 
 ## 📁 Project Structure
 
-
 linux-scripting-project/
 │
 ├── app.py
@@ -29,15 +36,14 @@ linux-scripting-project/
 ├── README.md
 │
 ├── Data_set/
-│ └── framingham.csv
+│   └── framingham.csv
 │
 ├── static/
-│ └── style.css
+│   └── style.css
 │
 ├── templates/
-│ ├── index.html
-│ └── result.html
-
+│   ├── index.html
+│   └── result.html
 
 ---
 
@@ -45,9 +51,7 @@ linux-scripting-project/
 
 ### 1. Train the Model
 
-
 python heart_disease_predictor.py
-
 
 - Loads dataset  
 - Cleans missing values  
@@ -59,9 +63,7 @@ python heart_disease_predictor.py
 
 ### 2. Run the Application
 
-
 python app.py
-
 
 Application will start at:
 
@@ -104,46 +106,34 @@ http://localhost:5000
 
 ## 🐳 Docker Setup
 
-### Build Docker Image
-
-
+Build Docker Image:
 docker build -t heart-disease-app .
 
-
-### Run Docker Container
-
-
+Run Docker Container:
 docker run -p 5000:5000 heart-disease-app
 
-
-Access the app at:
-
+Access:
 http://localhost:5000
 
 ---
 
 ## 📦 Installation
 
-
 pip install -r requirements.txt
-
 
 ---
 
 ## ⚠️ Important Note
 
-Update dataset path in heart_disease_predictor.py if needed:
-
+Update dataset path if needed:
 
 pd.read_csv("Data_set/framingham.csv")
-
 
 ---
 
 ## 📊 Model Information
 
 Models evaluated:
-
 - Logistic Regression (Selected)  
 - Decision Tree  
 - Naive Bayes  
@@ -151,7 +141,6 @@ Models evaluated:
 - SVM  
 
 Evaluation Metric:
-
 - Accuracy Score  
 
 ---

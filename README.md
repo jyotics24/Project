@@ -1,11 +1,3 @@
-# ❤️ Heart Disease Prediction Web Application
-
-A Machine Learning-based web application built using Flask that predicts the risk of heart disease based on user health inputs. The model is trained on the Framingham Heart Study dataset and provides real-time predictions through a simple web interface.
-
----
-
-## 📌 Features
-
 - User-friendly web interface for input  
 - Real-time heart disease risk prediction  
 - Trained ML model using multiple algorithms  
@@ -26,24 +18,26 @@ A Machine Learning-based web application built using Flask that predicts the ris
 
 ## 📁 Project Structure
 
+
 linux-scripting-project/
 │
-├── app.py                         # Flask application  
-├── heart_disease_predictor.py     # Model training script  
-├── model.pkl                      # Trained ML model  
-├── requirements.txt               # Dependencies  
-├── Dockerfile                     # Docker configuration  
-├── README.md                      # Documentation  
+├── app.py
+├── heart_disease_predictor.py
+├── model.pkl
+├── requirements.txt
+├── Dockerfile
+├── README.md
 │
 ├── Data_set/
-│   └── framingham.csv             # Dataset  
+│ └── framingham.csv
 │
 ├── static/
-│   └── style.css                  # CSS styling  
+│ └── style.css
 │
 ├── templates/
-│   ├── index.html                 # Input form  
-│   └── result.html                # Result page  
+│ ├── index.html
+│ └── result.html
+
 
 ---
 
@@ -51,7 +45,9 @@ linux-scripting-project/
 
 ### 1. Train the Model
 
+
 python heart_disease_predictor.py
+
 
 - Loads dataset  
 - Cleans missing values  
@@ -63,7 +59,9 @@ python heart_disease_predictor.py
 
 ### 2. Run the Application
 
+
 python app.py
+
 
 Application will start at:
 
@@ -108,11 +106,15 @@ http://localhost:5000
 
 ### Build Docker Image
 
+
 docker build -t heart-disease-app .
+
 
 ### Run Docker Container
 
+
 docker run -p 5000:5000 heart-disease-app
+
 
 Access the app at:
 
@@ -122,7 +124,9 @@ http://localhost:5000
 
 ## 📦 Installation
 
+
 pip install -r requirements.txt
+
 
 ---
 
@@ -130,13 +134,16 @@ pip install -r requirements.txt
 
 Update dataset path in heart_disease_predictor.py if needed:
 
+
 pd.read_csv("Data_set/framingham.csv")
+
 
 ---
 
 ## 📊 Model Information
 
 Models evaluated:
+
 - Logistic Regression (Selected)  
 - Decision Tree  
 - Naive Bayes  
@@ -144,6 +151,7 @@ Models evaluated:
 - SVM  
 
 Evaluation Metric:
+
 - Accuracy Score  
 
 ---

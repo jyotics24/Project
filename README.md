@@ -35,13 +35,13 @@ linux-scripting-project/
 ├── Dockerfile                     # Docker configuration  
 ├── README.md                      # Documentation  
 │
-├── Data_set/  
+├── Data_set/
 │   └── framingham.csv             # Dataset  
 │
-├── static/  
+├── static/
 │   └── style.css                  # CSS styling  
 │
-├── templates/  
+├── templates/
 │   ├── index.html                 # Input form  
 │   └── result.html                # Result page  
 
@@ -51,5 +51,110 @@ linux-scripting-project/
 
 ### 1. Train the Model
 
-```bash
 python heart_disease_predictor.py
+
+- Loads dataset  
+- Cleans missing values  
+- Trains multiple models  
+- Selects best model (Logistic Regression)  
+- Saves model as model.pkl  
+
+---
+
+### 2. Run the Application
+
+python app.py
+
+Application will start at:
+
+http://localhost:5000
+
+---
+
+### 3. Use the Application
+
+- Open browser → http://localhost:5000  
+- Fill in the required health details  
+- Click Submit  
+- View prediction result  
+
+---
+
+## 🧾 Input Parameters
+
+- Gender  
+- Age  
+- Smoker  
+- BP Medication  
+- Previous Stroke  
+- Hypertension  
+- Diabetes  
+- Cholesterol  
+- Systolic BP  
+- BMI  
+- Heart Rate  
+- Glucose  
+
+---
+
+## 🔮 Prediction Output
+
+- Low Risk: You are unlikely to have a risk of heart disease  
+- High Risk: You may have a risk of heart disease  
+
+---
+
+## 🐳 Docker Setup
+
+### Build Docker Image
+
+docker build -t heart-disease-app .
+
+### Run Docker Container
+
+docker run -p 5000:5000 heart-disease-app
+
+Access the app at:
+
+http://localhost:5000
+
+---
+
+## 📦 Installation
+
+pip install -r requirements.txt
+
+---
+
+## ⚠️ Important Note
+
+Update dataset path in heart_disease_predictor.py if needed:
+
+pd.read_csv("Data_set/framingham.csv")
+
+---
+
+## 📊 Model Information
+
+Models evaluated:
+- Logistic Regression (Selected)  
+- Decision Tree  
+- Naive Bayes  
+- KNN  
+- SVM  
+
+Evaluation Metric:
+- Accuracy Score  
+
+---
+
+## 👨‍💻 Author
+
+Jyotiprakash Khuntia  
+DevOps & Cloud Engineer  
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, give it a ⭐ on GitHub!
